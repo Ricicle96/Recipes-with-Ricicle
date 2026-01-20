@@ -5,7 +5,8 @@
 
   --h2-size: clamp(1.8rem, 3vw, 2.4rem);
   --h3-size: clamp(1.4rem, 2vw, 1.8rem);
-
+}
+/* Heading styles */
   h2, h3, h4, h5, h6 {
   font-family: var(--heading-font);
   color: var(--heading-color);
@@ -20,27 +21,28 @@ body {
   color: #000000;
   font-family: Arial, Helvetica, sans-serif;
 }
-
+/*Header banner*/
   .header {
     min-height: clamp(180px, 28vw, 320px);
     background-image: url("./Images/header_banner_6952x2200\ \(1\).png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+
     display: grid;
     place-items: center;
     text-align: center;
     padding: 1rem;
   }
-}
 
-/* Increase the font size of the <h1> element */
+/* Header title */  
 .header h1 {
+  margin: 0;
     font-family: 'Playfair Display', serif;
     font-weight: 700;
-    font-size: 100px;
+    /*responsive font size*/
+    font-size: clamp(2rem, 6vw, 4.5rem);
     color: #2e5d3e;
-    text-transform: none;
     -webkit-text-stroke: 2px #fff;
     text-shadow: 0 2px 6px rgba(0,0,0,0.25);
 }
@@ -117,7 +119,7 @@ body {
 }
 
 /*This section of the CSS is specifically for recipes pages */
-/*Recipe page titles/*
+/*Recipe page titles*/
 /* Title block */
 .recipe-title {
   max-width: 1100px;
