@@ -22,12 +22,16 @@ body {
 }
 
   .header {
-  padding: 80px; /* some padding */
-  text-align: center; /* center the text */
-  background-image: url("./Images/header_banner_6952x2200\ \(1\).png");
-  background-size: cover;
-  background-position: center;
-  color: #00ac1d; /* green text color */
+    min-height: clamp(180px, 28vw, 320px);
+    background-image: url("./Images/header_banner_6952x2200\ \(1\).png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    padding: 1rem;
+  }
 }
 
 /* Increase the font size of the <h1> element */
@@ -412,5 +416,4 @@ body {
     flex-direction: row;
     gap: 1rem;
     }
-}
 }
