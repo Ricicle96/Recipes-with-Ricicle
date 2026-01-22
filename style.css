@@ -73,25 +73,25 @@ body {
 /* Dropdown button */
 .dropdown .dropbtn {
   font-size: 16px;
-  font-family: Arial, Helvetica, sans-serif;
   border: none;
   outline: none;
   color: #F4F1EC;
   padding: 14px 16px;
   background-color: inherit;
-  font-family: inherit; /* Important for vertical align on mobile phones */
-  margin: 0; /* Important for vertical align on mobile phones */
+  font-family: inherit;
+  margin: 0;
 }
 
-/* Add a background color to navbar links on hover */
+/* Navbar links background colour on hover */
 .navbar a:hover, .dropdown:hover .dropbtn {
   background-color: #5F8F6B;
 }
 
-/* Dropdown content (hidden by default) */
+/* Dropdown content*/
 .dropdown-content {
   display: none;
   position: absolute;
+  margin-top: 0;
   background-color: #E6DDCF;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -101,14 +101,14 @@ body {
 /* Links inside the dropdown */
 .dropdown-content a {
   float: none;
-  color: black;
+  color: #000000;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
   text-align: left;
 }
 
-/* Add a grey background color to dropdown links on hover */
+/* Dropdown links on hover */
 .dropdown-content a:hover {
   background-color: #ddd;
 }
@@ -139,9 +139,9 @@ body {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
 }
 
-/* Optional: accent bar (comment out if not wanted) */
+/* Accent bar */
 .recipe-description {
-  border-left: 6px solid #2E5D3E; /* brand green */
+  border-left: 6px solid #2E5D3E;
 }
 
 /* Description paragraphs */
@@ -418,4 +418,39 @@ body {
     flex-direction: row;
     gap: 1rem;
     }
+}
+/*Index page CSS*/
+/* Homepage cards */
+.container {
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.website-description,
+.about-me {
+  padding: 1.1rem 1.4rem;
+  margin-bottom: 1.5rem;
+
+  border: 2px solid #E6DDCF;
+  border-radius: 12px;
+  background-color: #ffffff;
+
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+}
+
+.website-description {
+  border-left: 6px solid #2E5D3E;
+}
+
+.website-description p,
+.about-me p {
+  margin: 0;
+  color: #6B6B63;
+  line-height: 1.7;
+  font-size: 1.05rem;
+}
+
+.about-me h2 {
+  margin-top: 0;
 }
