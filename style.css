@@ -127,42 +127,6 @@ body {
   display: block;
 }
 
-/* Hide all links except first on small screens */
-@media screen and (max-width: 600px) {
-  .navbar a:not(:first-child), .dropdown .dropbtn {
-    display: none;
-  }
-  .navbar a.icon {
-    float: right;
-    display: block;
-  }
-}
-/* Responsive class added to navbar when icon clicked */
-@media screen and (max-width: 600px) {
-  .navbar.responsive {position: relative;}
-  .navbar.responsive .icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-  .navbar.responsive a {
-    float: none;
-    display: block;
-    text-align: left;
-  }
-  .navbar.responsive .dropdown {
-    float: none;
-  }
-  .navbar.responsive .dropdown-content {
-    position: relative;
-  }
-  .navbar.responsive .dropdown .dropbtn {
-    display: block;
-    width: 100%;
-    text-align: left;
-  }
-}
-
 /*This section of the CSS is specifically for recipes pages */
 /*Recipe page titles*/
 /* Title block */
