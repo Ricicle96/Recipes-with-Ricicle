@@ -64,6 +64,16 @@ body {
   text-decoration: none;
 }
 
+/*Active link */
+.active {
+  background-color: #5F8F6B;
+  color: white;
+}
+
+.navbar .icon {
+  display: none;
+}
+
 /* The dropdown container */
 .dropdown {
   float: left;
@@ -91,7 +101,6 @@ body {
 .dropdown-content {
   display: none;
   position: absolute;
-  margin-top: 0;
   background-color: #E6DDCF;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -116,6 +125,42 @@ body {
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
   display: block;
+}
+
+/* Hide all links except first on small screens */
+@media screen and (max-width: 600px) {
+  .navbar a:not(:first-child), .dropdown .dropbtn {
+    display: none;
+  }
+  .navbar a.icon {
+    float: right;
+    display: block;
+  }
+}
+/* Responsive class added to navbar when icon clicked */
+@media screen and (max-width: 600px) {
+  .navbar.responsive {position: relative;}
+  .navbar.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .navbar.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .navbar.responsive .dropdown {
+    float: none;
+  }
+  .navbar.responsive .dropdown-content {
+    position: relative;
+  }
+  .navbar.responsive .dropdown .dropbtn {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
 }
 
 /*This section of the CSS is specifically for recipes pages */
