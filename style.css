@@ -519,12 +519,19 @@ body {
   color: #254B34;
 }
 
+/* Tips section */
+
 .tips-section {
   display: grid;
-  gap: 1.25rem;
+  gap: 2rem;
+}
+
+.tips-category h3 {
+  margin: 0 0 0.8rem;
 }
 
 .tip-card {
+  margin-bottom: 1rem;
   padding: 1rem 1.25rem;
   border: 2px solid #E6DDCF;
   border-left: 6px solid #2E5D3E;
@@ -533,8 +540,10 @@ body {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
 }
 
-.tip-card h3 {
-  margin-top: 0;
+.tip-card h4 {
+  margin: 0 0 0.4rem;
+  font-family: var(--heading-font);
+  color: var(--heading-color)
 }
 
 .tip-card p {
