@@ -466,6 +466,7 @@ body {
 /* About Me layout */
 .about-me {
   margin-top: 2rem;
+  border-left: 6px solid #254B34;
 }
 
 .about-inner {
@@ -486,6 +487,7 @@ body {
   display: block;
   border-radius: 16px;
   object-fit: cover;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
 }
 
 /* Text column */
@@ -509,4 +511,10 @@ body {
     flex: none;
     width: 220px;
   }
+}
+
+.about-signoff {
+  margin-top: 1rem;
+  font-style:italic;
+  color: #254B34;
 }
