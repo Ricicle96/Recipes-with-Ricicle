@@ -518,3 +518,28 @@ body {
   font-style:italic;
   color: #254B34;
 }
+
+.tips-section {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.tip-card {
+  padding: 1rem 1.25rem;
+  border: 2px solid #E6DDCF;
+  border-left: 6px solid #2E5D3E;
+  border-radius: 12px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+}
+
+.tip-card h3 {
+  margin-top: 0;
+}
+
+.tip-card p {
+  margin: 0;
+  color: #6B6B63;
+  line-height: 1.7;
+  font-size: 1.05rem;
+}
