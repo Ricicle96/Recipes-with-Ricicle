@@ -463,3 +463,50 @@ body {
 .about-me h2 {
   margin-top: 0;
 }
+/* About Me layout */
+.about-me {
+  margin-top: 2rem;
+}
+
+.about-inner {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+}
+
+.about-image {
+  flex: 0 0 220px;
+  max-width: 220px; /* controls image column width */
+}
+
+.about-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 16px;
+  object-fit: cover;
+}
+
+/* Text column */
+.about-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.about-content h2 {
+  margin-top: 0;
+}
+
+/* Mobile stacking */
+@media (max-width: 768px) {
+  .about-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-image {
+    flex: none;
+    width: 220px;
+  }
+}
