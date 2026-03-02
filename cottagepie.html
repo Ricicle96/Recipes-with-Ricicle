@@ -20,7 +20,7 @@
   <a href="./tips.html">Tips and tricks</a>
   <a href="./tools.html">Useful Tools</a>
   <div class="dropdown">
-    <button class="dropbtn" class="active">Recipes
+    <button class="dropbtn active">Recipes
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-content">
@@ -193,68 +193,6 @@
         </ol>
       </div>
     </section>
-    <section class="stage-carousel" aria-label="Recipe stages">
-  <h2 class="stage-carousel__title">Step-by-step</h2>
-
-  <div class="stage-carousel__viewer">
-    <button class="stage-carousel__nav" type="button" data-dir="-1" aria-label="Previous image">
-      ‹
-    </button>
-
-    <figure class="stage-carousel__figure">
-      <img
-        class="stage-carousel__image"
-        src="images/cottage-pie/01-mince-browning.jpg"
-        alt="Browning the minced beef in a pan"
-        loading="lazy"
-        decoding="async"
-      />
-      <figcaption class="stage-carousel__caption">Browning the minced beef</figcaption>
-    </figure>
-
-    <button class="stage-carousel__nav" type="button" data-dir="1" aria-label="Next image">
-      ›
-    </button>
-  </div>
-
-  <div class="stage-carousel__thumbs" role="list">
-    <button class="stage-carousel__thumb is-active" type="button"
-      data-src="images/cottage-pie/01-mince-browning.jpg"
-      data-alt="Browning the minced beef in a pan"
-      data-caption="Browning the minced beef"
-      role="listitem"
-      aria-label="View stage 1">
-      <img src="images/CottagePie/01-mince-browning.jpg" alt="" />
-    </button>
-
-    <button class="stage-carousel__thumb" type="button"
-      data-src="images/cottage-pie/02-gravy-simmer.jpg"
-      data-alt="Simmering the beef in gravy with vegetables"
-      data-caption="Simmering the filling"
-      role="listitem"
-      aria-label="View stage 2">
-      <img src="images/CottagePie/02-gravy-simmer.webp" alt="" />
-    </button>
-
-    <button class="stage-carousel__thumb" type="button"
-      data-src="images/cottage-pie/03-mash-topping.jpg"
-      data-alt="Spreading mashed potato over the filling"
-      data-caption="Adding the mash topping"
-      role="listitem"
-      aria-label="View stage 3">
-      <img src="images/CottagePie/03-mash-topping.webp" alt="" />
-    </button>
-
-    <button class="stage-carousel__thumb" type="button"
-      data-src="images/cottage-pie/04-baked-golden.jpg"
-      data-alt="Cottage pie baked until golden on top"
-      data-caption="Baked until golden"
-      role="listitem"
-      aria-label="View stage 4">
-      <img src="images/CottagePie/04-baked-golden.webp" alt="" />
-    </button>
-  </div>
-</section>
   </main> 
   <footer class="site-footer">
   <div class="footer-inner">
@@ -286,5 +224,53 @@
     </div>
   </div>
 </footer>
+<script>
+  (function () {
+    const carousel = document.querySelector(".stage-carousel");
+    if (!carousel) return;
+
+    const mainImg = carousel.querySelector(".stage-carousel__image");
+    const caption = carousel.querySelector(".stage-carousel__caption");
+    const thumbs = Array.from(carousel.querySelectorAll(".stage-carousel__thumb"));
+    const navButtons = carousel.querySelectorAll(".stage-carousel__nav");
+
+    let index = thumbs.findIndex(t => t.classList.contains("is-active"));
+    if (index < 0) index = 0;
+
+    function setActive(i) {
+      index = (i + thumbs.length) % thumbs.length;
+
+      const btn = thumbs[index];
+      const src = btn.getAttribute("data-src");
+      const alt = btn.getAttribute("data-alt") || "";
+      const cap = btn.getAttribute("data-caption") || "";
+
+      mainImg.src = src;
+      mainImg.alt = alt;
+      caption.textContent = cap;
+
+      thumbs.forEach(t => t.classList.remove("is-active"));
+      btn.classList.add("is-active");
+
+      btn.scrollIntoView({ block: "nearest", inline: "nearest", behavior: "smooth" });
+    }
+
+    thumbs.forEach((btn, i) => btn.addEventListener("click", () => setActive(i)));
+
+    navButtons.forEach(btn => {
+      btn.addEventListener("click", () => {
+        const dir = Number(btn.getAttribute("data-dir")) || 0;
+        setActive(index + dir);
+      });
+    });
+
+    carousel.addEventListener("keydown", (e) => {
+      if (e.key === "ArrowLeft") setActive(index - 1);
+      if (e.key === "ArrowRight") setActive(index + 1);
+    });
+
+    setActive(index);
+  })();
+</script>
 </body>
 </html>

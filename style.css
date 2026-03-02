@@ -24,7 +24,7 @@ body {
 /*Header banner*/
   .header {
     min-height: clamp(180px, 28vw, 320px);
-    background-image: url("./Images/header_banner_6952x2200\ \(1\).png");
+    background-image: url("./images/header_banner_6952x2200\ \(1\).png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -462,105 +462,4 @@ body {
 
 .about-me h2 {
   margin-top: 0;
-}
-/* Image carousel */
-.stage-carousel {
-  margin-top: 2rem;
-  padding-top: 1.5rem;
-  border-top: 1px solid rgba(255,255,255,0.15);
-}
-
-.stage-carousel__title {
-  margin: 0 0 1rem;
-}
-
-.stage-carousel__viewer {
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-  gap: 0.75rem;
-  align-items: center;
-}
-
-.stage-carousel__nav {
-  width: 44px;
-  height: 44px;
-  border: 0;
-  border-radius: 10px;
-  cursor: pointer;
-  font-size: 1.5rem;
-  line-height: 1;
-  background: rgba(255,255,255,0.12);
-  color: inherit;
-}
-
-.stage-carousel__nav:hover {
-  background: rgba(255,255,255,0.18);
-}
-
-.stage-carousel__figure {
-  margin: 0;
-}
-
-.stage-carousel__image {
-  width: 100%;
-  max-height: 420px;
-  object-fit: cover;
-  border-radius: 14px;
-  display: block;
-  background: rgba(255,255,255,0.06);
-}
-
-.stage-carousel__caption {
-  margin-top: 0.5rem;
-  opacity: 0.9;
-  font-size: 0.95rem;
-}
-
-.stage-carousel__thumbs {
-  margin-top: 0.75rem;
-  display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: minmax(70px, 1fr);
-  gap: 0.5rem;
-  overflow-x: auto;
-  padding-bottom: 0.25rem;
-}
-
-.stage-carousel__thumb {
-  border: 2px solid transparent;
-  background: transparent;
-  padding: 0;
-  border-radius: 12px;
-  cursor: pointer;
-  flex: 0 0 auto;
-}
-
-.stage-carousel__thumb img {
-  width: 100%;
-  height: 70px;
-  object-fit: cover;
-  border-radius: 10px;
-  display: block;
-  opacity: 0.95;
-}
-
-.stage-carousel__thumb.is-active {
-  border-color: rgba(255,255,255,0.55);
-}
-
-.stage-carousel__thumb:focus-visible,
-.stage-carousel__nav:focus-visible {
-  outline: 3px solid rgba(255,255,255,0.6);
-  outline-offset: 2px;
-}
-
-@media (max-width: 520px) {
-  .stage-carousel__viewer {
-    grid-template-columns: 1fr;
-  }
-
-  .stage-carousel__nav {
-    width: 100%;
-    height: 44px;
-  }
 }
