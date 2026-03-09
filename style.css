@@ -551,3 +551,89 @@ body {
   line-height: 1.7;
   font-size: 1.05rem;
 }
+
+/*Tools section styling*/
+
+.tools-section {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.tool-card {
+  padding: 1.25rem;
+  border: 2px solid #E6DDCF;
+  border-radius: 12px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+}
+
+.tool-card h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.tool-card-content {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+
+.tool-image {
+  flex: 0 0 180px;
+}
+
+.tool-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.tool-text {
+  flex: 1;
+}
+
+.tool-text p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: #6B6B63;
+  line-height: 1.7;
+  font-size: 1.05rem;
+}
+
+.tool-link {
+  display: inline-block;
+  padding: 0.7rem 1rem;
+  background-color: #2E5D3E;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+}
+
+.tool-link:hover {
+  background-color: #254B34;
+}
+
+@media (max-width: 768px) {
+  .tool-card-content {
+    flex-direction: column;
+  }
+
+  .tool-image {
+    width: 100%;
+    max-width: 260px;
+  }
+}
+
+.affiliate-note {
+  max-width: 1100px;
+  margin: 0.5rem auto 1.5rem;
+  padding: 0 1rem;
+
+  font-size: 0.9rem;
+  color: #6B6B63;
+  font-style: italic;
+}
