@@ -243,7 +243,6 @@ body {
   color: #254B34;
 }
 
-/* Remove default list styling so we can style our own */
 .method-steps {
   list-style: none;
   margin: 0;
@@ -251,7 +250,7 @@ body {
   counter-reset: step;
 }
 
-/* Each step becomes a “card” */
+/* "Card" styling for each step */
 .method-steps li {
   counter-increment: step;
   display: grid;
