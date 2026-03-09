@@ -518,6 +518,70 @@ body {
   color: #254B34;
 }
 
+/*Featured recipes section*/
+.featured-recipes {
+  margin-top: 2rem;
+}
+
+.featured-intro {
+  margin: 0 0 1.25rem;
+  color: #6B6B63;
+  line-height: 1.7;
+  font-size: 1.05rem;
+}
+
+.featured-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.featured-card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  border: 2px solid #E6DDCF;
+  border-radius: 12px;
+  background-color: #ffffff;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.featured-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.08);
+}
+
+.featured-card img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+}
+
+.featured-card-content {
+  padding: 1rem 1.1rem;
+}
+
+.featured-card-content h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.featured-card-content p {
+  margin: 0;
+  color: #6B6B63;
+  line-height: 1.6;
+  font-size: 0.98rem;
+}
+
+@media (max-width: 900px) {
+  .featured-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* Tips section */
 
 .tips-section {
