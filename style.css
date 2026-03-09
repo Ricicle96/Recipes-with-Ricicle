@@ -580,6 +580,7 @@ body {
 
 .tool-image {
   flex: 0 0 180px;
+  max-width: 180px;
 }
 
 .tool-image img {
